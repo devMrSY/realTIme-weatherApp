@@ -1,0 +1,48 @@
+.searchImg {
+    height:29px;
+    width:31px;
+    position: absolute;
+    right: 2px;
+    top: 4px;
+    z-index: 99;
+}
+
+/*Forecast panel start*/
+.hourlyMainPanel {
+    overflow-x: scroll;
+}
+
+.hourlySubPanel {
+    border-radius: 8px;
+    margin-bottom: 14px;
+    padding: 16px;
+    background-color: white;
+    margin-right: 12px;
+    opacity: .8;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.hourlySubPanel div {
+    margin: auto;
+}
+
+/*Result panel start*/
+.CurrentCond {
+    font-size: 60px;
+}
+.weatherDiscription {
+    font-size: 22px;
+}
+
+.MainWeatherPanel {
+    min-height: 200px;
+    background-color: rgb(238, 231, 231);
+    opacity: .8;
+    border-radius: 22px;
+    font-size: 22px;
+}
+.subWeatherPanel  {
+    height: 50%;
+}
