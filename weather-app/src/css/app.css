@@ -5,13 +5,19 @@
     right: 20px;
     top: 5px;
     z-index: 99;
+    cursor: pointer;
 }
 
 .searchInput {
     width: 100%;
     padding: 8px;
     border: none;
-    border-radius: 8px !important;
+    border-radius: 8px;
+}
+
+.heading {
+    margin: -42px 0px 0px 19px;
+    color: rgba(137, 132, 202, 0.753);
 }
 
 /*Forecast panel start*/

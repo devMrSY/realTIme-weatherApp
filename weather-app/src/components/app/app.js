@@ -6,7 +6,7 @@ import Result from './result';
 
 function App() {
 
-  const [value, setValue] = useState('Delhi');
+  const [value, setValue] = useState('Russia');
   const [weatherInfo, setWeatherInfo] = useState(null);
   const [error, setError] = useState(false);
   const [loader, setLoader] = useState(false)
@@ -79,6 +79,7 @@ function App() {
         console.log(error);
   
         setError(true)
+        setValue('')
         setLoader(false)
         setWeatherInfo(null)
       });
@@ -88,6 +89,7 @@ function App() {
   
     return (
       <div className="Container">
+        <h4 class="heading position-absolute">Weather App</h4>
         <div className='row d-flex justify-content-center mt-5'>
           <div class="col-md-5 col-sm-6 position-relative">
             <input type="text" class="searchInput" placeholder="Enter City Name" onChange={handleInputChange} value={value}/>
