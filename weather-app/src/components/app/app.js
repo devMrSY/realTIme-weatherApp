@@ -84,20 +84,26 @@ function App() {
         setWeatherInfo(null)
       });
   };
-
-
-  
     return (
       <div className="Container">
-        <h4 class="heading position-absolute">Weather App</h4>
-        <div className='row d-flex justify-content-center mt-5'>
-          <div class="col-md-5 col-sm-6 position-relative">
-            <input type="text" class="searchInput" placeholder="Enter City Name" onChange={handleInputChange} value={value}/>
-            <img class="searchImg cursor-pointer" src={searchIcon} onClick={handleSearchCity}/>
+        <div className={`opacity-${loader ? '50' : '100'}`}>
+          <h5 class="heading position-absolute">Weather Forecasting App</h5>
+          <div className='row d-flex justify-content-center mt-5'>
+            <div class="col-md-5 col-sm-6 position-relative">
+              <input type="text" class="searchInput" placeholder="Enter City Name" onChange={handleInputChange} value={value}/>
+              <img class="searchImg cursor-pointer" src={searchIcon} onClick={handleSearchCity}/>
+            </div>
           </div>
+          {weatherInfo && <Result weather={weatherInfo} loader={loader} />}
+          {error && <NotFound error={error} />}
         </div>
-        {weatherInfo && <Result weather={weatherInfo} loader={loader} />}
-        {error && <NotFound error={error} />}
+        {/* {!loader && 
+          <div className='position-absolute'>
+            <div className="spinner-border" role="status">
+              <span class="sr-only"></span>
+            </div>
+          </div>
+        } */}
       </div>
     );
   }

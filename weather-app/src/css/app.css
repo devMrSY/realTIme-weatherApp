@@ -31,7 +31,7 @@
     padding: 16px;
     background-color: white;
     margin-right: 12px;
-    opacity: .8;
+    background: rgba(238, 231, 231, 0.3);
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -52,7 +52,7 @@
 .MainWeatherPanel {
     min-height: 200px;
     background-color: rgb(238, 231, 231);
-    opacity: .8;
+    background: rgba(238, 231, 231, 0.3);
     border-radius: 22px;
     font-size: 22px;
 }
