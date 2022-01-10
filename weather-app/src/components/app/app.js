@@ -89,13 +89,9 @@ function App() {
     return (
       <div className="Container">
         <div className='row d-flex justify-content-center mt-5'>
-          <div class="col-md-5 col-sm-6 ">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-              </div>
-              <input type="text" class="form-control" placeholder="Enter City Name" onChange={handleInputChange} value={value}/>
-              <img class="searchImg cursor-pointer" src={searchIcon} onClick={handleSearchCity}/>
-            </div>
+          <div class="col-md-5 col-sm-6 position-relative">
+            <input type="text" class="searchInput" placeholder="Enter City Name" onChange={handleInputChange} value={value}/>
+            <img class="searchImg cursor-pointer" src={searchIcon} onClick={handleSearchCity}/>
           </div>
         </div>
         {weatherInfo && <Result weather={weatherInfo} loader={loader} />}
