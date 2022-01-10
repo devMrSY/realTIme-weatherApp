@@ -20,6 +20,9 @@ function App() {
   };
   
   const handleSearchCity = () => {
+    if(!value) {
+      return
+    }
     const APIkey = '8616d21efde309796b1bfc4e9fbc9743';
     const weatherApi = `https://api.openweathermap.org/data/2.5/weather?q=${value}&APPID=${APIkey}&units=metric`;
     const forecastApi = `https://api.openweathermap.org/data/2.5/forecast?q=${value}&APPID=${APIkey}&units=metric`;
@@ -91,7 +94,7 @@ function App() {
           <div className='row d-flex justify-content-center mt-5'>
             <div class="col-md-5 col-sm-6 position-relative">
               <input type="text" class="searchInput" placeholder="Enter City Name" onChange={handleInputChange} value={value}/>
-              <img class="searchImg cursor-pointer" src={searchIcon} onClick={handleSearchCity}/>
+                <img class={`searchImg opacity-${value ? '100' : '50'}`} src={searchIcon} onClick={handleSearchCity}/>
             </div>
           </div>
           {weatherInfo && <Result weather={weatherInfo} loader={loader} />}
