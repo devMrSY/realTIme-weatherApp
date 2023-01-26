@@ -2,6 +2,11 @@
   "name": "weather-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://devmrsy.github.io/realTIme-weatherApp/",
+  "engines": {
+    "node": "16.14.0",
+    "npm": "8.5.0"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
